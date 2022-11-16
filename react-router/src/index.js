@@ -10,6 +10,9 @@ import {
   Navigate,
   Link,
   Outlet,
+  useParams,
+  NavLink,
+  useNavigate,
 } from "react-router-dom";
 // navigate - it is a component which is been imported from react-router-dom
 // this component is used to navigate to the specific path defined inside that component
@@ -23,10 +26,19 @@ root.render(
       {/* this above comand orverlap the component which is defined inside the path /home
       so to overcome this we use 'replace' keyword    */}
       <Route path="/home" element={<Home />}>
+        <Route path=":coursename" />
         <Route path="course" element={<Course />}>
           <Route path="outlet" element={<AboutOutlet />} />
+          <Route path="navigate" element={<AboutNavigate />} />
+          <Route path="usepramps" element={<AboutusePramps />} />
+          <Route path="navlink" element={<AboutNavLink />} />
+          <Route path="usenavigate" element={<AboutuseNavigate />} />
         </Route>
       </Route>
+      <Route
+        path="/home/course/usenavigate/newpage"
+        element={<button onClick={() => useNavigate()}>Go back</button>}
+      />
     </Routes>
   </Router>
 );
@@ -34,7 +46,7 @@ root.render(
 function Home() {
   return (
     <div>
-      <h1>hello we are learning react-router</h1>
+      <h1>hello here we will be learning {<CourseName />} </h1>
       <Link className="btn btn-primary" to="/home/course">
         About course
       </Link>
@@ -48,10 +60,25 @@ function Course() {
   return (
     <div>
       <h1>here we are learning different lib or components of react router </h1>
-      <Link className="btn btn-dark" to="/home/course/outlet">outlet</Link>
-      <br />
+      <NavLink
+        style={({ isActive }) => {
+          return {
+            backgroundColor: isActive ? "yellow" : "",
+          };
+        }}
+        to="/home/course/outlet"
+      >
+        outlet
+      </NavLink>
+      {" || "}
+      <NavLink to="/home/course/navigate">navigate</NavLink>
+      {" || "}
+      <NavLink to="/home/course/usePramps">useParams</NavLink>
+      {" || "}
+      <NavLink to="/home/course/navlink">NavLink</NavLink>
+      {" || "}
+      <Link to="/home/course/usenavigate">useNavigate</Link>
       <Outlet />
-      <Link to="/home/course/navigate">navigate</Link>
     </div>
   );
 }
@@ -73,7 +100,68 @@ function AboutOutlet() {
     </div>
   );
 }
+function AboutNavigate() {
+  return (
+    <div>
+      <h4>
+        it is a component which is been imported from react-router-dom this
+        component is used to navigate to the specific path defined inside that
+        component this is useful when we have defined a path(url path) but
+        inside that we want to navigate to another path
+      </h4>
+    </div>
+  );
+}
 
+function AboutusePramps() {
+  return (
+    <div>
+      <h4>
+        useParams- is a hook intraduced inside react router dom v6 <br />
+        this hook is used to fetch data from the url and that data can be used
+      </h4>
+    </div>
+  );
+}
+
+function AboutNavLink() {
+  return (
+    <div>
+      <h4>
+        NavLink- It is similar to "Link" but the only difference is in Link we
+        cant pass style properties <br />
+        in same tag but in NavLink we can
+      </h4>
+    </div>
+  );
+}
+function AboutuseNavigate() {
+  const navigate = useNavigate();
+  return (
+    <div>
+      <h4>
+        useNavigate- is a hook intraduced inside react router dom v6 <br />
+        this is similar to usehistory(RRD v5) which helps us to navigate to
+        other path <br />
+      </h4>
+      <button
+        onClick={() => navigate("/home/course/usenavigate/newpage")}
+        className="btn btn-warning"
+      >
+        Demo
+      </button>
+    </div>
+  );
+}
+
+function CourseName() {
+  const { coursename } = useParams();
+  return (
+    <div>
+      <h2>{coursename}</h2>
+    </div>
+  );
+}
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
