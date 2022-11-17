@@ -13,6 +13,7 @@ import {
   useParams,
   NavLink,
   useNavigate,
+  useLocation,
 } from "react-router-dom";
 // navigate - it is a component which is been imported from react-router-dom
 // this component is used to navigate to the specific path defined inside that component
@@ -37,7 +38,7 @@ root.render(
       </Route>
       <Route
         path="/home/course/usenavigate/newpage"
-        element={<button onClick={() => useNavigate()}>Go back</button>}
+        element={<AboutuseLocation />}
       />
     </Routes>
   </Router>
@@ -78,6 +79,8 @@ function Course() {
       <NavLink to="/home/course/navlink">NavLink</NavLink>
       {" || "}
       <Link to="/home/course/usenavigate">useNavigate</Link>
+      {" || "}
+      <Link to="/home/course/usenavigate/newpage">useLocation</Link>
       <Outlet />
     </div>
   );
@@ -145,7 +148,11 @@ function AboutuseNavigate() {
         other path <br />
       </h4>
       <button
-        onClick={() => navigate("/home/course/usenavigate/newpage")}
+        onClick={() =>
+          navigate("/home/course/usenavigate/newpage", {
+            state: "Go back",
+          })
+        }
         className="btn btn-warning"
       >
         Demo
@@ -159,6 +166,27 @@ function CourseName() {
   return (
     <div>
       <h2>{coursename}</h2>
+    </div>
+  );
+}
+
+function AboutuseLocation() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  return (
+    <div>
+      <button className="btn btn-light" onClick={() => navigate(-1)}>
+        {location.state} to privious page
+      </button>
+      <br />
+      <h4>
+        useLocation- its a hook which returns the current loaction objects of
+        the current page.
+        <br />
+        eg: in the above btn the string "Go back" has been saved as object in
+        useNavigate defination(i.e when we click on demo btn it takes us to
+        another page and also returns a objects)
+      </h4>
     </div>
   );
 }
