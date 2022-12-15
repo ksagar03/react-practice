@@ -3,7 +3,14 @@ const express = require("express");
 const app = express();
 const port = 7000;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "static")));
+app.use("/", require(path.join(__dirname, "/routes/Tolearnblog")));
+
+app.listen(port, () => {
+  console.log(`this website is working on http://localhost:${port}`);
+});
+
+/*
 app.get("/send/:name", (req, res) => {
   res.send("hello this is" + " " + req.params.name);
 });
@@ -16,7 +23,4 @@ app.get("/json", (req, res) => {
     surya: 20,
   });
 });
-
-app.listen(port, () => {
-  console.log(`this website is working on ${port}`);
-});
+ */
