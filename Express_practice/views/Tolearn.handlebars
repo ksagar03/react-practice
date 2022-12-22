@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {{#each Tolearndata}}
+    <div class="card" style="width: 25rem; gap:2%">
+      {{! <img src="..." class="card-img-top" alt="..."/> }}
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.Content}}</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <a href={{this.more_info}} class="btn btn-primary">more_info</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
