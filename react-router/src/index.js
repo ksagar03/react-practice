@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import bootstrap_practice from "./bootstrap_practice";
 import reportWebVitals from "./reportWebVitals";
 import {
   BrowserRouter as Router,
@@ -23,6 +24,7 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/bootstrap" element={<bootstrap_practice />} />
       <Route path="/h" element={<Navigate replace to="/home" />} />
       {/* this above comand orverlap the component which is defined inside the path /home
       so to overcome this we use 'replace' keyword    */}
@@ -48,6 +50,12 @@ function Home() {
   return (
     <div>
       <h1>hello here we will be learning {<CourseName />} </h1>
+      <Link className="btn btn-dark text-white p-2 " to="/bootstrap">
+        Bootstrap
+      </Link>
+      <br />
+      <br />
+
       <Link className="btn btn-primary" to="/home/course">
         About course
       </Link>
