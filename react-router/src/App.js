@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -96,7 +95,7 @@ function App() {
             <div className=" bg-primary p-3">3 columns</div>
           </div>
         </div>
-
+        <p>align-items-center will align the col vertically at the center</p>
         <div className="row h-10 bg-dark mb-3 align-items-center">
           <div className="col">
             <div className=" bg-primary p-3 gy-3">3 columns</div>
@@ -108,6 +107,7 @@ function App() {
             <div className=" bg-primary p-3">3 columns</div>
           </div>
         </div>
+        <p>align-items-end will align the col vertically at the end</p>
         <div className="row h-10 bg-dark mb-3 align-items-end">
           <div className="col">
             <div className=" bg-primary p-3 gy-3">3 columns</div>
@@ -119,8 +119,12 @@ function App() {
             <div className=" bg-primary p-3">3 columns</div>
           </div>
         </div>
+        <p>
+          We can also provide gutter widths either on X or Y axis, here we have
+          giventhe gutterwidth on Y-axis{" "}
+        </p>
         <div className="row h-10 bg-dark mb-3 align-item-start">
-          <div className="col gy-3">
+          <div className="col gy-3 ">
             <div className=" bg-primary p-3">3 columns</div>
           </div>
           <div className="col gy-3">
@@ -130,6 +134,59 @@ function App() {
             <div className=" bg-primary p-3">3 columns</div>
           </div>
         </div>
+
+        <div className="row h-10 bg-dark mb-3">
+          <div className="col align-self-start gy-1">
+            <div className=" bg-primary p-3 ">3 columns</div>
+          </div>
+          <div className="col align-self-center">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col align-self-end">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+        </div>
+        <h2>Col Horizontal alignment:</h2>
+        <p>To align col horizontally we use "justify-content-start or center or end"</p>
+        <div className="row h-10 bg-warning justify-content-center">
+          <div className="col-md-2 ">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+        </div>
+        <p>We can also try around</p>
+        <div className="row h-10 bg-warning justify-content-around">
+          <div className="col-md-2 ">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+        </div>
+        <p>we can also try between</p>
+        <div className="row h-10 bg-warning justify-content-between">
+          <div className="col-md-2 ">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="col bg-dark p-2 mb-2 text-white">
+              Horizontal alignment
+            </div>
+          </div>
+        </div>
+        <p>we can also try "evenly" and "around"</p>
       </div>
     </div>
   );
