@@ -50,10 +50,12 @@ function App() {
         </div>
         <h2>3. Nested rows and columns</h2>
         <div className="row">
-          <div className="col-md-12 bg-primary text-wh mb-2">hai
-     md-0.3Nestprimary      </div>
+          <div className="col-md-12 bg-primary text-wh mb-2">
+            hai md-0.3Nestprimary{" "}
+          </div>
           <div className="row">
-            <div className="col-md-2 bg-dark text-white  mb-2">hai
+            <div className="col-md-2 bg-dark text-white  mb-2">
+              hai
               <div className="col-md-0.3 bg-primary text-white text-center p-2 mb-3">
                 hello
               </div>
@@ -78,6 +80,54 @@ function App() {
                 hello
               </div>
             </div>
+          </div>
+        </div>
+        <h2>Col vertival allignment:</h2>
+        <p>Using align-item we can align items top middle and end</p>
+        <p>align-item-start will align cols at the top</p>
+        <div className="row h-10 bg-dark mb-3 align-item-start">
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col align-self-center">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+        </div>
+
+        <div className="row h-10 bg-dark mb-3 align-items-center">
+          <div className="col">
+            <div className=" bg-primary p-3 gy-3">3 columns</div>
+          </div>
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+        </div>
+        <div className="row h-10 bg-dark mb-3 align-items-end">
+          <div className="col">
+            <div className=" bg-primary p-3 gy-3">3 columns</div>
+          </div>
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+        </div>
+        <div className="row h-10 bg-dark mb-3 align-item-start">
+          <div className="col gy-3">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col gy-3">
+            <div className=" bg-primary p-3">3 columns</div>
+          </div>
+          <div className="col gy-3">
+            <div className=" bg-primary p-3">3 columns</div>
           </div>
         </div>
       </div>
