@@ -147,7 +147,10 @@ function App() {
           </div>
         </div>
         <h2>Col Horizontal alignment:</h2>
-        <p>To align col horizontally we use "justify-content-start or center or end"</p>
+        <p>
+          To align col horizontally we use "justify-content-start or center or
+          end"
+        </p>
         <div className="row h-10 bg-warning justify-content-center">
           <div className="col-md-2 ">
             <div className="col bg-dark p-2 mb-2 text-white">
@@ -187,6 +190,50 @@ function App() {
           </div>
         </div>
         <p>we can also try "evenly" and "around"</p>
+        <h2>Col brakes & col wraping</h2>
+        <p>
+          Max width of the col is 12 if the col width exceeds 12 the it comes to
+          next line
+        </p>
+        <div className="row">
+          <div className="col-9">
+            <div className="text-white p-3 mb-3 bg-warning">9 col width</div>
+          </div>
+          <div className="col-5">
+            <div className=" text-white p-3 mb-3 bg-warning">5 col width</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <div className="bg-primary mb-3 p-2">col break</div>
+          </div>
+          <div className="w-100"></div>
+          <div className="col-md-3">
+            <div className="bg-primary mb-3 p-2">col break</div>
+          </div>
+          <div className="col-md-3">
+            <div className="bg-primary mb-3 p-2">col break</div>
+          </div>
+          <div className="col-md-3">
+            <div className="bg-primary mb-3 p-2">col break</div>
+          </div>
+        </div>
+        <p>We can brake single rows into multiple rows using w-100 class</p>
+        <h2>Re-ordering col </h2>
+        <div className="row bg-info mb-3">
+          <div className="col-md-4 mb-3 gy-2 ">
+            <div className="bg-dark text-white p-2">col 1</div>
+          </div>
+          <div className="col-md-4 order-2 ">
+            <div className="bg-dark text-white p-2">col 2</div>
+          </div>
+          <div className="col-md-4 gy-2">
+            <div className="bg-dark text-white p-2">col 3</div>
+          </div>
+          <div className="col-md-4 gy-2 ">
+            <div className="bg-dark text-white p-2">col 4</div>
+          </div>
+        </div>
       </div>
     </div>
   );
