@@ -224,7 +224,7 @@ function App() {
           <div className="col-md-4 mb-3 gy-2 ">
             <div className="bg-dark text-white p-2">col 1</div>
           </div>
-          <div className="col-md-4 order-2 ">
+          <div className="col-md-4 mb-2 order-2 ">
             <div className="bg-dark text-white p-2">col 2</div>
           </div>
           <div className="col-md-4 gy-2">
@@ -232,6 +232,19 @@ function App() {
           </div>
           <div className="col-md-4 gy-2 ">
             <div className="bg-dark text-white p-2">col 4</div>
+          </div>
+        </div>
+        <h2>Col offsetting </h2>
+        <p>
+          this allows cols to shift left to right at many place className :
+          offset-1 ..{" "}
+        </p>
+        <div className="row bg-info mb-3">
+          <div className="col-md-2 mb-3 gy-2 ">
+            <div className="bg-dark text-white p-2">col 1</div>
+          </div>
+          <div className="col-md-2 mb-3 gy-2 offset-1 ">
+            <div className="bg-dark text-white p-2">col 2</div>
           </div>
         </div>
       </div>
