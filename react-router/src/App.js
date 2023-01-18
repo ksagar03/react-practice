@@ -261,7 +261,7 @@ function App() {
           <div className="col-md-2 mb-3 gy-2 ">
             <div className="bg-warning text-black p-2">col 1</div>
           </div>
-          <div className="col-md-2 mb-3 gy-2 offset-10 ">
+          <div className="col-md-2 mb-3 gy-2 offset-11 ">
             <div className="bg-dark text-white p-2">col 2</div>
           </div>
         </div>
@@ -270,7 +270,7 @@ function App() {
           <div className="col-md-2 mb-3 gy-2 ">
             <div className="bg-warning text-black p-2">col 1</div>
           </div>
-          <div className="col-md-2 mb-3 gy-2 offset-10 ">
+          <div className="col-md-2 mb-3 gy-2 offset-11 ">
             <div className="bg-dark text-white p-2">col 2</div>
           </div>
         </div>
