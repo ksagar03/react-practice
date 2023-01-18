@@ -247,6 +247,33 @@ function App() {
             <div className="bg-dark text-white p-2">col 2</div>
           </div>
         </div>
+        <div>
+          <h2>About Bootstrap</h2>
+          {/* float-md-end will move the image to the enf */}
+          <img className="col-md-3 float-md-end me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/180px-Bootstrap_logo.svg.png" alt="" />
+          Bootstrap is an HTML, CSS and JS library that focuses on simplifying the development of informative web pages as opposed to web applications. The primary purpose of adding it to a web project is to apply Bootstrap's choices of color, size, font and layout to that project. As such, the primary factor is whether the developers in charge find those choices to their liking. Once added to a project, Bootstrap provides basic style definitions for all HTML elements. The result is a uniform appearance for prose, tables and form elements across web browsers. In addition, developers can take advantage of CSS classes defined in Bootstrap to further customize the appearance of their contents. For example, Bootstrap has provisioned for light- and dark-colored tables, page headings, more prominent pull quotes, and text with a highlight.
+        </div>
+        <h2>Horizontal & vertical gutters </h2>
+        <p>all the rows and the cols written inside the container will be having the gutter width(i.e the spacing b/n  rows and cols) and this can be changed by parameter 'g' and also we can mention in which direction(X and Y axis) we require to change the gutter width. <br />
+        while using the offset class sometimes it over flows the container so to overcome that we use 'px' or "overflow-hidden" class <br />
+        without overflow-hidden class</p>
+        <div className="row bg-success mb-3">
+          <div className="col-md-2 mb-3 gy-2 ">
+            <div className="bg-warning text-black p-2">col 1</div>
+          </div>
+          <div className="col-md-2 mb-3 gy-2 offset-10 ">
+            <div className="bg-dark text-white p-2">col 2</div>
+          </div>
+        </div>
+        <p>with overflow-hidden class</p>
+        <div className="row bg-success mb-3 overflow-hidden">
+          <div className="col-md-2 mb-3 gy-2 ">
+            <div className="bg-warning text-black p-2">col 1</div>
+          </div>
+          <div className="col-md-2 mb-3 gy-2 offset-10 ">
+            <div className="bg-dark text-white p-2">col 2</div>
+          </div>
+        </div>
       </div>
     </div>
   );
