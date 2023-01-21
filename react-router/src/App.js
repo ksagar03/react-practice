@@ -250,13 +250,35 @@ function App() {
         <div>
           <h2>About Bootstrap</h2>
           {/* float-md-end will move the image to the enf */}
-          <img className="col-md-3 float-md-end me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/180px-Bootstrap_logo.svg.png" alt="" />
-          Bootstrap is an HTML, CSS and JS library that focuses on simplifying the development of informative web pages as opposed to web applications. The primary purpose of adding it to a web project is to apply Bootstrap's choices of color, size, font and layout to that project. As such, the primary factor is whether the developers in charge find those choices to their liking. Once added to a project, Bootstrap provides basic style definitions for all HTML elements. The result is a uniform appearance for prose, tables and form elements across web browsers. In addition, developers can take advantage of CSS classes defined in Bootstrap to further customize the appearance of their contents. For example, Bootstrap has provisioned for light- and dark-colored tables, page headings, more prominent pull quotes, and text with a highlight.
+          <img
+            className="col-md-3 float-md-end me-2"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/180px-Bootstrap_logo.svg.png"
+            alt=""
+          />
+          Bootstrap is an HTML, CSS and JS library that focuses on simplifying
+          the development of informative web pages as opposed to web
+          applications. The primary purpose of adding it to a web project is to
+          apply Bootstrap's choices of color, size, font and layout to that
+          project. As such, the primary factor is whether the developers in
+          charge find those choices to their liking. Once added to a project,
+          Bootstrap provides basic style definitions for all HTML elements. The
+          result is a uniform appearance for prose, tables and form elements
+          across web browsers. In addition, developers can take advantage of CSS
+          classes defined in Bootstrap to further customize the appearance of
+          their contents. For example, Bootstrap has provisioned for light- and
+          dark-colored tables, page headings, more prominent pull quotes, and
+          text with a highlight.
         </div>
         <h2>Horizontal & vertical gutters </h2>
-        <p>all the rows and the cols written inside the container will be having the gutter width(i.e the spacing b/n  rows and cols) and this can be changed by parameter 'g' and also we can mention in which direction(X and Y axis) we require to change the gutter width. <br />
-        while using the offset class sometimes it over flows the container so to overcome that we use 'px' or "overflow-hidden" class <br />
-        without overflow-hidden class</p>
+        <p>
+          all the rows and the cols written inside the container will be having
+          the gutter width(i.e the spacing b/n rows and cols) and this can be
+          changed by parameter 'g' and also we can mention in which direction(X
+          and Y axis) we require to change the gutter width. <br />
+          while using the offset class sometimes it over flows the container so
+          to overcome that we use 'px' or "overflow-hidden" class <br />
+          without overflow-hidden class
+        </p>
         <div className="row bg-success mb-3">
           <div className="col-md-2 mb-3 gy-2 ">
             <div className="bg-warning text-black p-2">col 1</div>
@@ -274,6 +296,117 @@ function App() {
             <div className="bg-dark text-white p-2">col 2</div>
           </div>
         </div>
+        <h2>Typograpghy</h2>
+        <h3 className="text-decoration-underline">heading tags (h)</h3>
+        <h1>heading h1 </h1>
+        <h2>heading h2 </h2>
+        <h3>heading h3 </h3>
+        <h4>heading h4 </h4>
+        <h5>heading h5 </h5>
+        <h6>heading h6 </h6>
+        <h1 className="text-muted">
+          this h1 tag will be muted i.e color will be slightly dull compared to
+          normal "h" tags{" "}
+        </h1>
+        <h6 className="display-6">
+          "display-1" will increase the font size of the heading it can vary
+          from 1 to 6
+        </h6>
+        <h3>Paragraph tags</h3>
+        <p>
+          We can provide heading (h) class to vary the text size of the
+          paragraph{" "}
+        </p>
+        <p className="h1">Paragraph with h1 class</p>
+        <p className="h2">Paragraph with h2 class</p>
+        <p className="h3">Paragraph with h3 class</p>
+        <p className="h4">Paragraph with h4 class</p>
+        <p className="h5">Paragraph with h5 class</p>
+        <p className="h6">Paragraph with h6 class</p>
+        <p className="h6 lead">
+          Paragraph with h6 and lead class <br /> lead class will change the
+          font color{" "}
+        </p>
+        <h2>Inline text elements</h2>
+        <p>normal HTML tags</p>
+        <p>
+          this is a <mark>mark tag</mark>
+        </p>
+        <p>
+          this is a <u>underline tag</u>
+        </p>
+        <p>
+          this is a <del>delete tag</del>
+        </p>
+        <p>
+          this is a <s>strike tag</s>
+        </p>
+        <p>
+          this is a <small>small tag</small>
+        </p>
+        <p>
+          this is a <strong>strong tag</strong>
+        </p>
+        <p>
+          this is a <ins>INS tag</ins>
+        </p>
+        <p>
+          this is a <em>Empasize tag</em>
+        </p>
+
+        <hr />
+        <p>
+          <strong>We can also use bootstrap class to decorate the text</strong>
+        </p>
+        <p>
+          using bootstrap classes to style
+          <span className="mark">"mark" class</span>
+          <br />
+          <span className="text-decoration-line-through">
+            "text-decoration-line-through" class
+          </span>
+          <br />
+          <span className="text-decoration-underline">
+            "text-decoration-underline" class
+          </span>
+          <br />
+          <span className="small">small class</span>
+        </p>
+        <h2>Working with list</h2>
+        <p>ther are three ways to define a lists </p>
+        <h3 className="text-decoration-underline">Un-ordered lists </h3>
+        <ul>
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+          <li>four</li>
+          </ul>
+          
+          <p>using "list-unstyled" we can remove the bullets</p>
+          <ul className="list-unstyled">
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+          <li>four</li>
+          </ul>
+          <hr />
+          <h3 className="text-decoration-underline">Inline-list</h3>
+          <p>using "list-inline" and "list-inline-item" we can view the list in a single line</p>
+          <ul className="list-inline">
+          <li className="list-inline-item">One</li>
+          <li className="list-inline-item">Two</li>
+          <li className="list-inline-item">Three</li>
+          <li className="list-inline-item">Four</li>
+          </ul>
+          <hr />
+          <h3 className="text-decoration-underline">Description list</h3>
+          <dl>
+            <dt>"discription term"</dt>
+            <dd>"discription data" and this line will be shown in normal test i.e not in bold letters</dd>
+            <dt>text-truncate</dt>
+            <dd className="text-truncate">if user has more data to show and he has less space then he can use text-truncate(minimize the screen size) </dd>
+          </dl>
+
       </div>
     </div>
   );
