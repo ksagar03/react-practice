@@ -380,33 +380,99 @@ function App() {
           <li>two</li>
           <li>three</li>
           <li>four</li>
-          </ul>
-          
-          <p>using "list-unstyled" we can remove the bullets</p>
-          <ul className="list-unstyled">
+        </ul>
+
+        <p>using "list-unstyled" we can remove the bullets</p>
+        <ul className="list-unstyled">
           <li>one</li>
           <li>two</li>
           <li>three</li>
           <li>four</li>
-          </ul>
-          <hr />
-          <h3 className="text-decoration-underline">Inline-list</h3>
-          <p>using "list-inline" and "list-inline-item" we can view the list in a single line</p>
-          <ul className="list-inline">
+        </ul>
+        <hr />
+        <h3 className="text-decoration-underline">Inline-list</h3>
+        <p>
+          using "list-inline" and "list-inline-item" we can view the list in a
+          single line
+        </p>
+        <ul className="list-inline">
           <li className="list-inline-item">One</li>
           <li className="list-inline-item">Two</li>
           <li className="list-inline-item">Three</li>
           <li className="list-inline-item">Four</li>
-          </ul>
-          <hr />
-          <h3 className="text-decoration-underline">Description list</h3>
-          <dl>
-            <dt>"discription term"</dt>
-            <dd>"discription data" and this line will be shown in normal test i.e not in bold letters</dd>
-            <dt>text-truncate</dt>
-            <dd className="text-truncate">if user has more data to show and he has less space then he can use text-truncate(minimize the screen size) </dd>
-          </dl>
-
+        </ul>
+        <hr />
+        <h3 className="text-decoration-underline">Description list</h3>
+        <dl>
+          <dt>"discription term"</dt>
+          <dd>
+            "discription data" and this line will be shown in normal test i.e
+            not in bold letters
+          </dd>
+          <dt>text-truncate</dt>
+          <dd className="text-truncate">
+            if user has more data to show and he has less space then he can use
+            text-truncate(minimize the screen size){" "}
+          </dd>
+        </dl>
+        <h2>Tables</h2>
+        <p>
+          we can change the background color of the table using class
+          table-(primary,secondary,light,success,warning,dark, info) <br /> eg:
+          table-info <br /> <strong>table-striped -- </strong> this will provide
+          a gray and white patternin the background <br />{" "}
+          <span className="mark"> note:</span> note: this class will provide row
+          wise pattern and to provide pattern in col wise we use{" "}
+          <span className="text-decoration-underline">
+            {" "}
+            table-striped-columns
+          </span>{" "}
+          <br />
+          <strong>table-hover -- </strong> this class will provide hover effect
+          for all the rows
+          <br />
+          <strong>table-bordered -- </strong> this class will border around the
+          table
+          <br />
+          <strong>table-sm -- </strong> this class will decrease the size of the
+          table table
+          <br />
+          <strong>table-group-divider --</strong> this class will provide a
+          thick border
+        </p>
+        <table className="table  table-hover table-bordered table-sm table-group-divider">
+          <thead className="table-warning">
+            <tr>
+              <th>S.No</th>
+              <th>content</th>
+              <th>about</th>
+            </tr>
+          </thead>
+          <tbody className="table-group-divider">
+            <tr>
+              <td>1</td>
+              <td>React</td>
+              <td>
+                React is a javscript framework which is used to develop frontend
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Node</td>
+              <td>
+                Node is a javscript framework which is used to develop backend
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>React-router-dom</td>
+              <td>
+                React Router DOM is an npm package that enables you to implement
+                dynamic routing in a web app
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
