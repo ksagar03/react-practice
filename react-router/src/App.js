@@ -474,12 +474,37 @@ function App() {
           </tbody>
         </table>
         <h2>Image</h2>
+        <p>
+          <strong>img-fluid--</strong> this classname is used to fit the image
+          as per the screen size and it is also used to fit inside the columns
+          defined(col-md-4) <br />
+          <strong>img-thumbnail--</strong>This classname is used to provides
+          extra border to the image(in below image i have used img-thumbnail)
+        </p>
+
         <div className="row">
-        <div className="col-md-2 justify-content-center mb-3">
-          <img className="img-fluid img-thumbnail" src="https://a-static.besthdwallpaper.com/one-piece-logo-wallpaper-2560x1600-8626_7.jpg" alt=""/>
+          <div className="col-md-6 mb-3">
+            <img
+              className="img-fluid img-thumbnail"
+              src="https://a-static.besthdwallpaper.com/one-piece-logo-wallpaper-2560x1600-8626_7.jpg"
+              alt=""
+            />
+          </div>
+          <div className="col-md-6 mt-4 ">
+            <img
+              className="img-fluid rounded"
+              src="https://staticg.sportskeeda.com/editor/2022/11/a402f-16694231050443-1920.jpg"
+              alt=""
+            />
+          </div>
+          <div className="col-md-12 mt-2 mb-3">
+            <img
+              className="img-fluid img-thumbnail mx-auto d-block"
+              src="https://staticg.sportskeeda.com/editor/2022/09/a3331-16622109493354-1920.jpg"
+              alt=""
+            />
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );
