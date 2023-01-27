@@ -473,6 +473,13 @@ function App() {
             </tr>
           </tbody>
         </table>
+        <h2>Image</h2>
+        <div className="row">
+        <div className="col-md-2 justify-content-center mb-3">
+          <img className="img-fluid img-thumbnail" src="https://a-static.besthdwallpaper.com/one-piece-logo-wallpaper-2560x1600-8626_7.jpg" alt=""/>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
