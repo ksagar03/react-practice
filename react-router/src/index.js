@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import bootstrap_practice from "./bootstrap_practice";
 import reportWebVitals from "./reportWebVitals";
 import {
   BrowserRouter as Router,
@@ -16,6 +15,7 @@ import {
   useNavigate,
   useLocation,
 } from "react-router-dom";
+import Navbar from "./Navbar";
 // navigate - it is a component which is been imported from react-router-dom
 // this component is used to navigate to the specific path defined inside that component
 // this is useful when we have defined a path(url path) but inside that we want to navigate to another path
@@ -24,7 +24,7 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/bootstrap" element={<bootstrap_practice />} />
+      <Route path="/navbar" element={<Navbar/>} />
       <Route path="/h" element={<Navigate replace to="/home" />} />
       {/* this above comand orverlap the component which is defined inside the path /home
       so to overcome this we use 'replace' keyword    */}
